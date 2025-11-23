@@ -1,72 +1,292 @@
+/* Font family */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+
+/* Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    max-width: 100vw;
-}
-
-.root {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
-.homepage {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    
 }
 
-.navbar {
-    width: 100%;
-    height: 60px;
-    margin: 0;
+body {
+    font-family: "Poppins",'Arial', sans-serif;
+    line-height: 1.6;
+    color: #0D3B66;
+    background-color: #FFFFFF;
 }
 
-.topNav {
-    background-color: aqua;
-    width: 1000%;
-    height: 30px;
-    margin: 0;
-    border-bottom: 2px solid red;
+/* Header / Navigation */
+header {
+    background: linear-gradient(90deg, #0D3B66, #3DA5D9);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 6rem;
 }
 
-.bottomNav {
-    height: 30px;
-    width: 100%;
-    margin: 0;
-    background-color: darkblue;
-}
-.landingPage{
+#navOne {
     display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid red;
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+    height: 3rem;
+    background-color: #3DA5D9;
+    
+}
+
+#navOne a {
+    text-decoration: none;
+    margin-left: 1rem;
+    
+
+}
+
+#navOne #contact span {
+    /* font-size: clamp(8px, 10px, 15px, 20px) */
+    font-size: 0.7rem;
+}
+
+#navTwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+    height: 3rem;
+
+}
+
+.logo {
+    padding-left: 10px;
+    margin-top: 5px;
+
+}
+
+#logo-img {
+    width: 50px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Hover underline */
+.nav-links li a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #E63946;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s;
+}
+
+.nav-links li a:hover:after,
+.nav-links li a:focus:after {
+    width: 100%;
+}
+
+/* Current section highlight using :target */
+.section:target~nav .nav-links li a[href*="#"]:after {
+    width: 100%;
+    background: #E63946;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    /* padding: 4rem 2rem; */
+    text-align: center;
+    max-width: 100vw;
+    margin: auto;
+    height: 81vh;
+}
+
+.home {
+    background: linear-gradient(150deg, rgb(21, 71, 118, 0.6), rgba(128, 139, 196, 0)), url(../IMG/HomePage.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: URL(./IMG/HomePage.png);  
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* width: 100vw; */
-    height: 89vh;
-    
-    
-}
-.welcomeNote{
-  background: linear-gradient(to bottom,
-      rgba(94, 109, 187, 0.8),  rgba(128, 139, 196, 0));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 45px;
-  letter-spacing: 4px;
-  width: 65%;
-  height: 120px;
-  border-radius: 30px;
-  color: white;
 }
 
-h1{
-    color: rgba(241, 233, 233, 0.772);
-    font-size: 30px;
-    text-shadow: 4px 4px 4px rgba(194, 86, 86, 0.5);
+.welcomeNote {
+    background: linear-gradient(180deg,
+            rgba(68, 177, 223, 0.6), rgba(128, 139, 196, 0));
+    /* line-height: 45px; */
+    /* letter-spacing: 4px; */
+    max-width: 80%;
+    height: 120px;
+    border-radius: 30px;
+    color: white;
+    padding: 10px;
+}
+
+.section h1 {
+    /* margin-bottom: 1rem; */
+    /* color: #0D3B66; */
+    font-size: clamp(1rem, 1.5rem, 2rem, 2.5rem)
+}
+
+/* Course Cards */
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #EAF6FF;
+    border: 2px solid #0D3B66;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 200px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #E63946;
+}
+
+/* Gallery */
+.gallery-section .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #0D3B66;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: #E63946;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #0D3B66;
+    color: white;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #E63946;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #0D3B66;
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background-color: #0D3B66;
+        flex-direction: column;
+        width: 200px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding-top: 4rem;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    #menu-toggle:checked+.hamburger+.nav-links {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+    }
+
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 150px;
+        height: 120px;
+    }
+}
+
+/* Mobile screen rotation */
+@media (orientation: landscape) and (max-width: 768px) {
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .gallery img {
+        width: 120px;
+        height: 100px;
+    }
 }
