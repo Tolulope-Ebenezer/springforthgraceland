@@ -53,7 +53,7 @@ header {
 
 #navOne #contact span {
     /* font-size: clamp(8px, 10px, 15px, 20px) */
-    font-size: 0.7rem;
+    font-size: 0.6rem;
 }
 
 #navTwo {
@@ -242,6 +242,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 800px) {
+
+    #navOne span {
+        display: none;
+    }
     .nav-links {
         position: fixed;
         right: 0;
@@ -252,15 +256,19 @@ footer {
         width: 200px;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
-        padding-top: 4rem;
+        padding: 4rem 4rem 2rem 4rem;
     }
 
     .nav-links li {
         margin: 1.5rem 0;
     }
+    #nav-links li:hover {
+        background-color: #3DA5D9;
+    }
 
     #menu-toggle:checked+.hamburger+.nav-links {
         transform: translateX(0);
+        /* display: block; */
     }
 
     .hamburger {
