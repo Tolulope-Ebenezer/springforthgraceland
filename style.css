@@ -12,11 +12,11 @@
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-    
+
 }
 
 body {
-    font-family: "Poppins",'Arial', sans-serif;
+    font-family: "Poppins", 'Arial', sans-serif;
     line-height: 1.6;
     color: #0D3B66;
     background-color: #FFFFFF;
@@ -24,7 +24,7 @@ body {
 
 /* Header / Navigation */
 header {
-    background: linear-gradient(90deg, #0D3B66, #3DA5D9);
+    background: linear-gradient(90deg, #0d3b66, rgb(104, 163, 192));
     color: white;
     position: sticky;
     top: 0;
@@ -41,13 +41,13 @@ header {
     padding: 1rem;
     height: 3rem;
     background-color: #3DA5D9;
-    
+
 }
 
 #navOne a {
     text-decoration: none;
     margin-left: 1rem;
-    
+
 
 }
 
@@ -246,6 +246,7 @@ footer {
     #navOne span {
         display: none;
     }
+
     .nav-links {
         position: fixed;
         right: 0;
@@ -262,6 +263,7 @@ footer {
     .nav-links li {
         margin: 1.5rem 0;
     }
+
     #nav-links li:hover {
         background-color: #3DA5D9;
     }

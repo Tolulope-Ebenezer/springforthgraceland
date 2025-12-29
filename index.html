@@ -5,84 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpringForth GraceLand School</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <!-- ICONS LINK -->
-     <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- tab icon -->
-    <link rel="icon" href="../IMG/Springforth logo.png" type="image/png" />
+    <link rel="icon" href="./IMG/Springforth logo.png" type="image/png" />
 </head>
 
 <body>
     <!-- Navigation -->
-    <header>
-        <nav id="navOne">
+    <header class="w-full h-[4.5rem] text-[10px] fixed">
+        <nav id="navOne" class=" flex flex-row bg-[#3DA5D9] text-blue justify-between items-end h-[2rem]">
             <div id="contact">
-                <a href="" class="cnl1 cnl11"><i class="fa-regular fa-clock-o fa"></i><span>8:00am - 3pm
+                <a href="" class="pr-[10px]"><i class="fa-regular fa-clock-o fa"></i><span>8:00am - 3pm
                         daily</span></a>
-                <a href="" class="cnl1 cnl12"><i class="fa-solid fa-phone fa"></i><span>+2348065519033</span></a>
+                <a href="" class="pr-[10px]"><i class="fa-solid fa-phone fa"></i><span>+2348065519033</span></a>
                 <a href="" class="cnl1 cnl13"><i class="fa-solid fa-map-marker fa"></i><span>1 Adoga Martinz street, off
                         Nureni
                         Yusuf Drive, Kola Alagbado, Lagos.</span></a>
             </div>
             <div id="socialMedia">
-                <a href=""><i class="fa-brands fa-facebook fa"></i></a>
-                <a href=""><i class="fa-brands fa-instagram fa"></i></a>
-                <a href=""><i class="fa-brands fa-twitter-square fa"></i></a>
+                <a href="" class="pr-[10px]"><i class="fa-brands fa-facebook fa"></i></a>
+                <a href="" class="pr-[10px]"><i class="fa-brands fa-instagram fa"></i></a>
+                <a href="" class="pr-[10px]"><i class="fa-brands fa-twitter-square fa"></i></a>
                 <a href=""><i class="fa-brands fa-linkedin fa"></i></a>
             </div>
         </nav>
-        <nav id="navTwo">
-            <div class="logo"><img id="logo-img" src="../IMG/Springforth logo.png" alt=""></div>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">&#9776;</label>
-            <ul class="nav-links">
-                <li><label for="menu-toggle"><a href="#home">Home</a></label></li>
-                <li><label for="menu-toggle"><a href="#about">About</a></label></li>
-                <li><label for="menu-toggle"><a href="#courses">Staffs</a></label></li>
-                <li><label for="menu-toggle"><a href="#gallery">Gallery</a></label></li>
+        <div class="h-[0.5rem] bg-red-500"></div>
+        <nav id="navTwo"
+            class="bg-gradient-to-r from-[rgba(10,40,102,5)] to-[rgba(61,165,217,0.8)] flex flex-row items-end h-[2rem] justify-between">
+            <div class="w-[30px]"><img id="logo-img" src="./IMG/Springforth logo.png" alt=""></div>
+            <!-- <input type="checkbox" id="menu-toggle"> -->
+            <label for="menu-toggle" class="hidden">&#9776;</label>
+            <ul class="flex flex-row text-white justify-between hover:text-red-500 font-bold">
+                <li><label for="menu-toggle" class="pr-[10px]"><a href="#home">Home</a></label></li>
+                <li><label for="menu-toggle" class="pr-[10px]"><a href="#about">About</a></label></li>
+                <li><label for="menu-toggle" class="pr-[10px]"><a href="#courses">Staffs</a></label></li>
+                <li><label for="menu-toggle" class="pr-[10px]"><a href="#gallery">Gallery</a></label></li>
                 <li><label for="menu-toggle"><a href="#contact">Contact</a></label></li>
             </ul>
         </nav>
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="section home">
-        <div class="welcomeNote">
-            <h1>Welcome to SpringForth GraceLand School</h1>
-            <p>Motto : Learn today, Lead tomorrow</p>
+    <section id="home"
+        class="bg-[url('../IMG/HomePage.png')] h-[100vh] bg-no-repeat bg-center bg-cover flex items-center justify-center mb-[20px]">
+        <div
+            class="h-[120px] flex flex-col bg-gradient-to-b from-[rgba(68,177,223,0.6)] to-[rgba(128,139,196,0)] rounded-[30px] w-[80%] items-center">
+            <h1 class="text-[clamp(13px,3vw,45px)] text-white">
+                Welcome to SpringForth GraceLand School
+            </h1>
+            <p class="text-[clamp(10px,3vw,35px)] text-white">Motto : Learn today, Lead tomorrow</p>
         </div>
 
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section about">
-        <h2>About Us</h2>
-        <p>Our school provides a holistic education focusing on academic excellence, sports, arts, and moral values.</p>
+    <section id="about" class="h-[100vh] flex flex-col items-center mb-[20px]">
+        <h2 class="flex justify-center text-[clamp(21px,2vw,40px)] font-bold border-[5px] border-[#0D3B66] p-[5px]">
+            About Us</h2>
+        <p class="w-full flex justify-center font-bold text-[clamp(6.5px,2vw,27px)]">Our school provides a holistic
+            education focusing
+            on academic excellence,
+            sports, arts, and
+            moral values.</p>
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="section courses">
-        <h2>Our Courses</h2>
-        <div class="course-cards">
-            <div class="card">
-                <h3>Mathematics</h3>
-                <p>Develop critical thinking and problem-solving skills.</p>
-            </div>
-            <div class="card">
-                <h3>Science</h3>
-                <p>Explore the wonders of physics, chemistry, and biology.</p>
-            </div>
-            <div class="card">
-                <h3>Language Arts</h3>
-                <p>Enhance communication, reading, and writing skills.</p>
-            </div>
-            <div class="card">
-                <h3>History & Social Studies</h3>
-                <p>Learn about our world, cultures, and past events.</p>
-            </div>
-            <div class="card">
-                <h3>Physical Education</h3>
-                <p>Promote health, fitness, and teamwork.</p>
+    <section id="courses" class="h-[100vh]">
+        <div class="flex flex-col items-center">
+            <h2
+                class="flex justify-center text-[clamp(21px,2vw,40px)] font-bold border-[5px] border-[#0D3B66] p-[5px] mb-[5px]">
+                Our Courses</h2>
+            <div class="flex flex-row m-[10px] h-[200px]">
+                <div class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px] flex-col">
+                    <div>
+                        <h3>Mathematics</h3>
+                        <p>Develop critical thinking and problem-solving skills.</p>
+                    </div>
+                    <div class="flex bg-blue-500 items-end">name</div>
+                </div>
+                <div class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px]">
+                    <h3>Science</h3>
+                    <p>Explore the wonders of physics, chemistry, and biology.</p>
+                </div>
+                <div class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px]">
+                    <h3>Language Arts</h3>
+                    <p>Enhance communication, reading, and writing skills.</p>
+                </div>
+                <div class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px]">
+                    <h3>History & Social Studies</h3>
+                    <p>Learn about our world, cultures, and past events.</p>
+                </div>
+                <div class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66]">
+                    <h3>Physical Education</h3>
+                    <p>Promote health, fitness, and teamwork.</p>
+                </div>
             </div>
         </div>
     </section>
