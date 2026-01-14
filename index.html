@@ -12,15 +12,18 @@
     <link rel="icon" href="./IMG/Springforth logo.png" type="image/png" />
 </head>
 
-<body>
+<body class="w-full h-screen">
     <!-- Navigation -->
-    <header class="w-full h-[4.5rem] text-[10px] fixed">
-        <nav id="navOne" class=" flex flex-row bg-[#3DA5D9] text-blue justify-between items-end h-[2rem]">
+    <header class="w-full h-[4.5rem] text-[10px] fixed z-1">
+        <nav id="navOne" class="p-[20px] flex flex-row bg-[#3DA5D9] text-blue justify-between items-center h-[2rem]">
             <div id="contact">
-                <a href="" class="pr-[10px]"><i class="fa-regular fa-clock-o fa"></i><span>8:00am - 3pm
+                <a href="" class="pr-[10px]"><i class="fa-regular fa-clock-o fa"></i><span
+                        class="[@media(max-width:768px)]:hidden">8:00am - 3pm
                         daily</span></a>
-                <a href="" class="pr-[10px]"><i class="fa-solid fa-phone fa"></i><span>+2348065519033</span></a>
-                <a href="" class="cnl1 cnl13"><i class="fa-solid fa-map-marker fa"></i><span>1 Adoga Martinz street, off
+                <a href="" class="pr-[10px]"><i class="fa-solid fa-phone fa"></i><span
+                        class="[@media(max-width:768px)]:hidden">+2348065519033</span></a>
+                <a href="" class="cnl1 cnl13"><i class="fa-solid fa-map-marker fa"></i><span
+                        class="[@media(max-width:768px)]:hidden">1 Adoga Martinz street, off
                         Nureni
                         Yusuf Drive, Kola Alagbado, Lagos.</span></a>
             </div>
@@ -31,13 +34,14 @@
                 <a href=""><i class="fa-brands fa-linkedin fa"></i></a>
             </div>
         </nav>
-        <div class="h-[0.5rem] bg-red-500"></div>
+        <div class="h-[0.2rem] bg-red-500"></div>
         <nav id="navTwo"
-            class="bg-gradient-to-r from-[rgba(10,40,102,5)] to-[rgba(61,165,217,0.8)] flex flex-row items-end h-[2rem] justify-between">
+            class="p-[20px] bg-gradient-to-r from-[rgba(10,40,102,5)] to-[rgba(61,165,217,0.8)] flex flex-row items-center h-[2rem] justify-between">
             <div class="w-[30px]"><img id="logo-img" src="./IMG/Springforth logo.png" alt=""></div>
             <!-- <input type="checkbox" id="menu-toggle"> -->
-            <label for="menu-toggle" class="hidden">&#9776;</label>
-            <ul class="flex flex-row text-white justify-between hover:text-red-500 font-bold">
+            <label for="menu-toggle" class="hidden [@media(max-width:768px)]:block">&#9776;</label>
+            <ul
+                class="flex flex-row text-white justify-between hover:text-red-500 font-bold [@media(max-width:768px)]:hidden">
                 <li><label for="menu-toggle" class="pr-[10px]"><a href="#home">Home</a></label></li>
                 <li><label for="menu-toggle" class="pr-[10px]"><a href="#about">About</a></label></li>
                 <li><label for="menu-toggle" class="pr-[10px]"><a href="#courses">Staffs</a></label></li>
@@ -49,9 +53,9 @@
 
     <!-- Home Section -->
     <section id="home"
-        class="bg-[url('../IMG/HomePage.png')] h-[100vh] bg-no-repeat bg-center bg-cover flex items-center justify-center mb-[20px]">
+        class="bg-[url('../IMG/HomePage.png')] h-[100vh] bg-no-repeat bg-center bg-cover object-cover flex items-center justify-center mb-[20px] w-full">
         <div
-            class="h-[120px] flex flex-col bg-gradient-to-b from-[rgba(68,177,223,0.6)] to-[rgba(128,139,196,0)] rounded-[30px] w-[80%] items-center">
+            class="h-[clamp(60px\,5.36vw\,120px)] flex flex-col bg-gradient-to-b from-[rgba(68,177,223,0.6)] to-[rgba(128,139,196,0)] rounded-[30px] w-[80%] items-center">
             <h1 class="text-[clamp(13px,3vw,45px)] text-white">
                 Welcome to SpringForth GraceLand School
             </h1>
@@ -61,77 +65,94 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="h-[100vh] flex flex-col items-center mb-[20px]">
-        <h2 class="flex justify-center text-[clamp(21px,2vw,40px)] font-bold border-[5px] border-[#0D3B66] p-[5px]">
+    <section id="about"
+        class="h-[100vh] flex flex-col items-center mb-[20px] bg-gradient-to-b from-[rgba(68,177,223,0.6)] to-[rgba(128,139,196,1)]">
+        <h2 class="mt-[5px] justify-center text-[clamp(21px,2vw,40px)] font-bold border-[5px] border-[#0D3B66] p-[5px]">
             About Us</h2>
-        <p class="w-full flex justify-center font-bold text-[clamp(6.5px,2vw,27px)]">Our school provides a holistic
+        <p class="w-full flex font-bold text-[clamp(6.5px,2vw,27px)]">Our school provides a holistic
             education focusing
             on academic excellence,
             sports, arts, and
-            moral values.</p>
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="h-[65vh]">
-        <div class="flex flex-col items-center">
-            <h2
-                class="flex justify-center text-[clamp(21px,2vw,40px)] font-bold border-[5px] border-[#0D3B66] p-[5px] mb-[5px]">
-                Our Courses</h2>
-            <div class="flex flex-row m-[10px] h-[200px] justify-center">
-                <div
-                    class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px] rounded-[15px] w-[18%] hover:[transform:translateY(-10px)] hover:border-[#E63946] transition-transform duration-300">
-                    <div>
-                        <h3>Mathematics</h3>
-                        <p>Develop critical thinking and problem-solving skills.</p>
-                    </div>
+            moral values.
+        </p>
+        <div class="flex flex-row w-[100%] justify-between text-[clamp(8px,2vw,25px)]">
+            <div class="w-[50%] pl-[10px]">
+                <img src="../IMG/aboutus.jpg" alt="Mission and vision image"
+                    class="max-w-full h-auto object-cover border border-[5px] border-[#0D3B66]">
+            </div>
+            <div class="flex flex-col w-[48%]">
+                <div>
+                    <h4 class="font-bold">Vision</h4>
+                    <p>We envision a world in which every child, regardless of background becomes a
+                        Godly, responsible
+                        and
+                        productive
+                        child.</p>
                 </div>
-                <div
-                    class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px] rounded-[15px] w-[18%] hover:[transform:translateY(-10px)] hover:border-[#E63946] transition-transform duration-300">
-                    <h3>Science</h3>
-                    <p>Explore the wonders of physics, chemistry, and biology.</p>
-                </div>
-                <div
-                    class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px] rounded-[15px] w-[18%] hover:[transform:translateY(-10px)] hover:border-[#E63946] transition-transform duration-300">
-                    <h3>Language Arts</h3>
-                    <p>Enhance communication, reading, and writing skills.</p>
-                </div>
-                <div
-                    class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] mr-[10px] rounded-[15px] w-[18%] hover:[transform:translateY(-10px)] hover:border-[#E63946] transition-transform duration-300">
-                    <h3>History & Social Studies</h3>
-                    <p>Learn about our world, cultures, and past events.</p>
-                </div>
-                <div
-                    class="bg-[#EAF6FF] border border-[2px] border-[#0D3B66] rounded-[15px] w-[18%] hover:[transform:translateY(-10px)] hover:border-[#E63946] transition-transform duration-300">
-                    <h3>Physical Education</h3>
-                    <p>Promote health, fitness, and teamwork.</p>
+                <div>
+                    <h4 class="font-bold">Mission</h4>
+                    <p>To empower our pupils to become a life-long learners who are Godly,
+                        responsible, disciplined,
+                        productive
+                        and
+                        engaged citizen within the global community.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Courses Section -->
+    <section id="courses" class="h-[100vh]">
+        <div class="flex flex-col items-center">
+            <h2
+                class="flex justify-center text-[clamp(21px,2vw,40px)] font-bold border-[5px] border-[#0D3B66] p-[5px] mb-[5px]">
+                Our Staffs</h2>
+            <div class="grid grid-cols-4 gap-[10px]">
+                <img src=" ../IMG/Teacher1.jpg" alt="staff image 1"
+                    class="w-full h-auto border border-[2px] border-[#0D3B66]">
+                <img src="../IMG/Teacher2.jpg" alt="staff image 2"
+                    class="w-full h-auto border border-[2px] border-[#0D3B66]">
+                <img src="../IMG/Teacher3.jpg" alt="staff image 3"
+                    class="w-full h-auto border border-[2px] border-[#0D3B66]">
+                <img src="../IMG/Teacher4.jpg" alt="staff image 4"
+                    class="w-full h-auto border border-[2px] border-[#0D3B66]">
+            </div>
+    </section>
+
     <!-- Gallery Section -->
-    <section id="gallery" class="section gallery-section">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/200" alt="School Image 1">
-            <img src="https://via.placeholder.com/200" alt="School Image 2">
-            <img src="https://via.placeholder.com/200" alt="School Image 3">
-            <img src="https://via.placeholder.com/200" alt="School Image 4">
+    <section id="gallery" class="flex flex-col items-center">
+        <h2
+            class="flex justify-center font-bold border-[5px] border-[#0D3B66] p-[10px] mb-[5px] text-[clamp(21px,2vw,40px)] w-[15%]">
+            Gallery
+        </h2>
+        <div class="grid grid-cols-3 grid-row-2 gap-[10px] w-[50%]">
+            <img src="../IMG/galimg1.jpg" alt="School Image 1"
+                class="border border-[2px] border-[#0D3B66] col-span-2 row-span-1 h-[250px] object-cover w-full h-full">
+            <img src="../IMG/galimg2.jpg" alt="School Image 2"
+                class="border border-[2px] border-[#E63946] col-span-1 row-span-1 h-[250px] object-cover w-full h-full">
+            <img src="../IMG/galimg3.jpg" alt="School Image 3"
+                class="border border-[2px] border-[#E63946] col-span-1 row-span-1 h-[250px] object-cover w-full h-full">
+            <img src="../IMG/galimg4.jpg" alt="School Image 4"
+                class="border border-[2px] border-[#0D3B66] col-span-2 row-span-1 h-[250px] object-cover w-full h-full">
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@secondaryschool.com</p>
-        <p>Phone: +123 456 7890</p>
-        <p>Address: 123 School Street, Education City</p>
+    <section id="contact" class="h-[10vh] f bg-[rgba(68,177,223,0.6)]">
+        <div>
+            <h2 class="flex justify-center font-bold">Contact Us</h2>
+        </div>
+        <div class="flex flex-row justify-between bg-[rgb(68,177,233)]">
+            <p>Email: info@secondaryschool.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 School Street, Education City</p>
+        </div>
     </section>
 
     <!-- Back to Top Button -->
     <a href="#home" class="back-to-top">&#8679;</a>
 
-    <footer>
+    <footer class="flex justify-center bg-[#0D3B66]">
         <p>&copy; 2025 Secondary School. All rights reserved.</p>
     </footer>
 </body>
