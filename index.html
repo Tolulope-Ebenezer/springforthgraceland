@@ -14,8 +14,8 @@
 
 <body class="w-full h-screen bg-gradient-to-r from-[rgba(10,40,102,0.3)] to-[rgba(61,165,217,0.2)]">
     <!-- Navigation -->
-    <header class="w-full h-[1rem] text-[10px] fixed z-1">
-        <nav id="navOne" class="p-[10px] flex flex-row bg-[#3DA5D9] text-blue justify-between items-center h-[0.4rem]">
+    <header class="w-full h-[4.1rem] text-[10px] fixed z-1">
+        <nav id="navOne" class="p-[10px] flex flex-row bg-[#3DA5D9] text-blue justify-between items-center h-[2rem]">
             <div id="contact">
                 <a href="" class="pr-[10px]"><i class="fa-regular fa-clock-o fa"></i><span
                         class="[@media(max-width:768px)]:hidden">8:00am - 3pm
@@ -36,8 +36,8 @@
         </nav>
         <div class="h-[0.1rem] bg-red-500"></div>
         <nav id="navTwo"
-            class="p-[10px] bg-gradient-to-r from-[rgba(10,40,102,5)] to-[rgba(61,165,217,0.8)] flex flex-row items-center h-[0.4rem] justify-between">
-            <div class="w-[20px]"><img id="logo-img" src="./IMG/Springforth logo.png" alt=""></div>
+            class="p-[10px] bg-gradient-to-r from-[rgba(10,40,102,5)] to-[rgba(61,165,217,0.8)] flex flex-row items-center h-[2rem] justify-between">
+            <div class="w-[30px]"><img id="logo-img" src="./IMG/Springforth logo.png" alt=""></div>
             <div class="[@media(min-width:769px)]:hidden">
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
                 <label for="menu-toggle" class="hidden [@media(max-width:768px)]:block">&#9776;
@@ -70,7 +70,7 @@
 
     <!-- Home Section -->
     <section id="home"
-        class="bg-[url('../IMG/HomePage.png')] h-[100vh] bg-no-repeat bg-center bg-cover object-cover flex items-center justify-center mb-[20px] w-full [@media(max-width:768px)]:h-[70vh]">
+        class="bg-[url('../IMG/HomePage.png')]  bg-no-repeat bg-center bg-cover object-cover flex items-center justify-center mb-[20px] w-full  sm:h-[70vh] lg:h-[100vh]">
         <div
             class="h-[clamp(60px\,5.36vw\,120px)] flex flex-col bg-gradient-to-b from-[rgba(68,177,223,0.6)] to-[rgba(128,139,196,0)] rounded-[30px] w-[80%] items-center">
             <h1 class="text-[clamp(13px,3vw,45px)] text-white">
@@ -82,9 +82,10 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="pt-[3rem] bg-white h-auto flex flex-col items-center pb-[10px] mb-[10px]">
+    <section id="about"
+        class="pt-[4rem] bg-white  flex flex-col items-center pb-[10px] mb-[10px] sm:h-[60vh] md:h-[100vh]">
         <h2
-            class="mt-[5px] justify-center text-[clamp(10px,2.7vw,40px)] font-bold border-[clamp(2px,0.3vw,5px)] border-[#0D3B66] p-[5px] mb-[5px]">
+            class="mt-[5px] justify-center text-[clamp(10px,2.7vw,40px)] font-bold border-[clamp(2px,0.3vw,5px)] border-[#0D3B66] p-[5px] mb-[5px] text-gradient-to-r from-[rgba(10,40,102,0.3)] to-[rgba(61,165,217,0.2)]">
             About Us</h2>
         <div class="flex flex-row flex-no-wrap w-[100%] justify-between text-[clamp(8px,2vw,25px)]">
             <div class="flex flex-col w-[50%] text-[clamp(6px,1.7vw,25px)] pl-[5px]">
@@ -107,18 +108,18 @@
             </div>
             <div class="w-[40%] pr-[5px]">
                 <img src="./IMG/aboutus.jpg" alt="Mission and vision image"
-                    class="w-full h-auto object-cover border border-[clamp(2px,0.3vw,5px)] border-[#0D3B66]">
+                    class="max-w-full max-h-full object-cover border border-[clamp(2px,0.3vw,5px)] border-[#0D3B66]">
             </div>
         </div>
     </section>
 
     <!-- Staff Section -->
-    <section id="staff" class="pt-[3rem] mb-[20px] h-auto">
+    <section id="staff" class="pt-[4.2rem] mb-[20px] lg:h-[100vh] sm:h-[60vh]">
         <div class="flex flex-col items-center">
             <h2
                 class="flex justify-center text-[clamp(10px,2.7vw,40px)] font-bold border-[clamp(2px,0.3vw,5px)] border-[#0D3B66] p-[5px] mb-[5px]">
                 Our Staff</h2>
-            <div class="grid grid-cols-4 gap-[10px] mx-[5px]">
+            <div class="grid grid-cols-4 gap-[10px] mx-[5px] [@media(max-width:768px)]:grid-cols-2 gap[10px] mx-[5px]">
                 <img src=" ./IMG/Teacher1.jpg" alt="staff image 1" class=" h-auto border border-[2px] border-[#0D3B66]">
                 <img src="./IMG/Teacher2.jpg" alt="staff image 2"
                     class="w-full h-auto border border-[2px] border-[#0D3B66]">
