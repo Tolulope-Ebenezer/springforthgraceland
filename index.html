@@ -12,7 +12,7 @@
     <link rel="icon" href="./IMG/Springforth logo.png" type="image/png" />
 </head>
 
-<body class="w-full h-screen bg-gradient-to-r from-[rgba(10,40,102,0.3)] to-[rgba(61,165,217,0.2)]">
+<body class="w-full h-[100%]  bg-white">
     <!-- Navigation -->
     <header class="w-full h-[4.1rem] text-[10px] fixed z-1">
         <nav id="navOne" class="p-[10px] flex flex-row bg-[#3DA5D9] text-blue justify-between items-center h-[2rem]">
@@ -44,16 +44,21 @@
                 </label>
                 <nav class="bg-[#3DA5D9] absolute mt-2 right-0 hidden peer-checked:flex flex-col w-[200px] h-[100vh]">
                     <a href="#home"
-                        class="block px-4 py-2 font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-200">Home</a>
+                        class="block px-4 py-2 font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-500"
+                        onclick="document.getElementById('menu-toggle').checked = false">Home</a>
                     <a href="#about"
-                        class="block px-4 py-2  font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-500">About
+                        class="block px-4 py-2  font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-500"
+                        onclick="document.getElementById('menu-toggle').checked = false">About
                         us</a>
-                    <a href="#staff" class="block px-4 py-2  font-bold text-[20px] text-white hover:text-red-500">Our
+                    <a href="#staff" class="block px-4 py-2  font-bold text-[20px] text-white hover:text-red-500"
+                        onclick="document.getElementById('menu-toggle').checked = false">Our
                         Staff</a>
                     <a href="#gallery"
-                        class="block px-4 py-2 font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-500">Gallery</a>
+                        class="block px-4 py-2 font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-500"
+                        onclick="document.getElementById('menu-toggle').checked = false">Gallery</a>
                     <a href="#contactus"
-                        class="block px-4 py-2 font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-500">Contact
+                        class="block px-4 py-2 font-bold text-[20px] text-white hover:text-red-500 transition-colors duration-500"
+                        onclick="document.getElementById('menu-toggle').checked = false">Contact
                         Us</a>
                 </nav>
             </div>
@@ -70,7 +75,7 @@
 
     <!-- Home Section -->
     <section id="home"
-        class="bg-[url('../IMG/HomePage.png')]  bg-no-repeat bg-center bg-cover object-cover flex items-center justify-center mb-[20px] w-full  sm:h-[70vh] lg:h-[100vh]">
+        class="min-h-[38rem] bg-[url('../IMG/HomePage.png')]  bg-no-repeat bg-center bg-cover object-cover flex items-center justify-center mb-[20px] w-full md:h-[40rem]">
         <div
             class="h-[clamp(60px\,5.36vw\,120px)] flex flex-col bg-gradient-to-b from-[rgba(68,177,223,0.6)] to-[rgba(128,139,196,0)] rounded-[30px] w-[80%] items-center">
             <h1 class="text-[clamp(13px,3vw,45px)] text-white">
@@ -83,12 +88,12 @@
 
     <!-- About Section -->
     <section id="about"
-        class="pt-[4rem] bg-white  flex flex-col items-center pb-[10px] mb-[10px] sm:h-[60vh] md:h-[100vh]">
+        class="h-[22rem] pt-[4rem] bg-gradient-to-r from-[rgba(61,165,200,0.8)] to-[rgba(10,40,98,0.5)]  flex flex-col items-center pb-[10px] mb-[10px] lg:h-[35rem] md:h-[28rem]">
         <h2
             class="mt-[5px] justify-center text-[clamp(10px,2.7vw,40px)] font-bold border-[clamp(2px,0.3vw,5px)] border-[#0D3B66] p-[5px] mb-[5px] text-gradient-to-r from-[rgba(10,40,102,0.3)] to-[rgba(61,165,217,0.2)]">
             About Us</h2>
         <div class="flex flex-row flex-no-wrap w-[100%] justify-between text-[clamp(8px,2vw,25px)]">
-            <div class="flex flex-col w-[50%] text-[clamp(6px,1.7vw,25px)] pl-[5px]">
+            <div class="flex flex-col w-[50%] text-[clamp(7px,1.7vw,25px)] pl-[5px]">
                 <div>
                     <h4 class="font-bold">Vision</h4>
                     <p>We envision a world in which every child, regardless of background becomes a
@@ -106,31 +111,34 @@
                         engaged citizen within the global community.</p>
                 </div>
             </div>
-            <div class="w-[40%] pr-[5px]">
+            <div class="w-[40%] pr-[5px] h-[100%]">
                 <img src="./IMG/aboutus.jpg" alt="Mission and vision image"
-                    class="max-w-full max-h-full object-cover border border-[clamp(2px,0.3vw,5px)] border-[#0D3B66]">
+                    class="w-full h-full object-cover border border-[clamp(2px,0.3vw,5px)] border-[#0D3B66]">
             </div>
         </div>
     </section>
 
     <!-- Staff Section -->
-    <section id="staff" class="pt-[4.2rem] mb-[20px] lg:h-[100vh] sm:h-[60vh]">
+    <section id="staff" class="pt-[4.2rem] mb-[20px] sm:h-[40rem] md:h-[28rem] lg:h-[38rem]">
         <div class="flex flex-col items-center">
             <h2
-                class="flex justify-center text-[clamp(10px,2.7vw,40px)] font-bold border-[clamp(2px,0.3vw,5px)] border-[#0D3B66] p-[5px] mb-[5px]">
+                class="flex justify-center text-[clamp(10px,2.7vw,40px)] font-bold border-[clamp(2px,0.3vw,5px)] border-[#0D3B66] p-[3px] mb-[5px]">
                 Our Staff</h2>
-            <div class="grid grid-cols-4 gap-[10px] mx-[5px] [@media(max-width:768px)]:grid-cols-2 gap[10px] mx-[5px]">
-                <img src=" ./IMG/Teacher1.jpg" alt="staff image 1" class=" h-auto border border-[2px] border-[#0D3B66]">
+            <div class=" grid grid-cols-4 gap-[10px] mx-[5px] [@media(max-width:767px)]:grid-cols-2 grid-row-2">
+                <img src=" ./IMG/Teacher1.jpg" alt="staff image 1"
+                    class="w-full h-full object-cover border border-[2px] border-[#0D3B66] [@media(max-width:767px)]:col-span-1 row-span-1 h-[250px]">
                 <img src="./IMG/Teacher2.jpg" alt="staff image 2"
-                    class="w-full h-auto border border-[2px] border-[#0D3B66]">
+                    class="w-full h-full object-cover border border-[2px] border-[#0D3B66] [@media(max-width:767px)]:col-span-1 row-span-1 h-[250px]">
                 <img src="./IMG/Teacher3.jpg" alt="staff image 3"
-                    class="w-full h-auto border border-[2px] border-[#0D3B66]">
-                <img src="./IMG/Teacher4.jpg" alt="staff image 4" class=" h-auto border border-[2px] border-[#0D3B66]">
+                    class="w-full h-full object-cover border border-[2px] border-[#0D3B66] [@media(max-width:767px)]:col-span-1 row-span-1 h-[250px]">
+                <img src="./IMG/Teacher4.jpg" alt="staff image 4"
+                    class="w-full h-full object-cover border border-[2px] border-[#0D3B66] [@media(max-width:767px)]:col-span-1 row-span-1 h-[250px]">
             </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="pt-[3rem] bg-white h-auto flex flex-col items-center mb-[10px] pb-[10px]">
+    <section id="gallery"
+        class="bg-gradient-to-r from-[rgba(61,165,200,0.8)] to-[rgba(10,40,98,0.5)] pt-[4rem] bg-white h-auto flex flex-col items-center mb-[10px] pb-[10px] h-[10rem]">
         <h2 class="flex justify-center font-bold mb-[2px] text-[clamp(21px,2vw,40px)] w-[15%]">
             Gallery
         </h2>
@@ -147,7 +155,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contactus" class="h-[20vh] bg-[#3DA5D9]">
+    <!-- <section id="contactus" class="h-[20vh] bg-[#3DA5D9]">   
         <div>
             <h2 class="flex justify-center font-bold text-white text-[clamp(10px,1.3vw,25px)]">Contact Us</h2>
         </div>
@@ -182,11 +190,70 @@
                     within our student body.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    <section id="footer"
+    class=" w-full mt-[20%] bg-gradient-to-t from-[rgba(54,63,140,0.5)] to-[rgba(16,3,129,0.719)] flex flex-col items-center justify-center text-white [@media(max-width:768px)]:h-[60%]">
+    <div class="w-full h-[90%] flex flex-col items-center justify-center ">
+      <div
+        class="flex flex-row w-full h-[30%] mt-[10px] bg-gradient-to-t from-[rgba(54,63,140,0.5)] to-[rgba(16,3,129,0.5)] [@media(max-width:768px)]:bg-none justify-evenly rounded-[10px] items-center [@media(max-width:768px)]:flex-col [@media(max-width:768px)]:h-[50vh] [@media(max-width:768px)]:items-start [@media(max-width:768px)]:h-[70%] [@media(max-width:768px)]:mt-[40px] [@media(max-width:768px)]:gap-[15px] [@media(max-width:768px)]:w-[80%]">
+        <div class="flex items-center justify-center [@media(max-width:768px)]:bg-gradient-to-t from-[rgba(54,63,140,0.5)] to-[rgba(16,3,129,0.5)] [@media(max-width:768px)]:w-full [@media(max-width:768px)]:rounded-[10px] [@media(max-width:768px)]:h-[50px]">
+          <i class="fa fa-mobile text-[40px] pr-[10px]" aria-hidden="true"></i>
+          <p class="[@media(max-width:961px)]:text-[10px]">Call Us For Enquiry <br /><span
+              class="font-bold mt-[10px]">+2348065519033</span></p>
+        </div>
+        <div class="flex items-center justify-center [@media(max-width:768px)]:w-full [@media(max-width:768px)]:bg-gradient-to-t from-[rgba(54,63,140,0.5)] to-[rgba(16,3,129,0.5)] [@media(max-width:768px)]:rounded-[10px] [@media(max-width:768px)]:h-[50px]">
+          <i class="fa fa-at text-[30px] pr-[10px] [@media(max-width:768px)]:text-[30px]" aria-hidden="true"></i>
+          <p class=" [@media(max-width:961px)]:text-[10px] [@media (max-width:562px)]:text-[7px]">
+            Message Us For Enquiry <br /><span class="font-bold mt-[10px]">legacyvillaschools25@gmail.com</span>
+          </p>
+        </div>
+        <div class="flex items-center justify-center  text-[clamp(10px,2.5vw,16px)] [@media(max-width:768px)]:w-full [@media(max-width:768px)]:mb-[50px] [@media(max-width:768px)]:bg-gradient-to-t from-[rgba(54,63,140,0.5)] to-[rgba(16,3,129,0.5)] [@media(max-width:768px)]:rounded-[10px] [@media(max-width:768px)]:h-[50px]">
+          <i class="fa fa-building-o text-[40px] pr-[10px] [@media(max-width:645px)]:text-[30px]" aria-hidden="true"></i>
+          <p class="[@media(max-width:961px)]:text-[10px]">
+            Visit Us For Enquiry <br />
+            <span class="font-bold">10 Ifelodun street, off Nureni Yusuf Drive,  Alagbado, Lagos.</span>
+          </p>
+        </div>
+      </div>
+      <div class="w-full h-[60%] justify-evenly flex items-center gap-[20px] [@media(max-width:768px)]:hidden [@media(max-width:487px)]:h-[50px]">
+        <div class="leading-[20px] [@media(max-width:833px)]:leading-[15px]  text-[clamp(10px,2.5vw,16px)]">
+          <h3 class="mb-[15px] font-bold">About Us</h3>
+          <p>
+            Our Mission and Vision is to have a <br />
+            total child after school independent
+          </p>
+          <h2>
+            follow Us :
+            <a href=""><i class="fa-brands fa-facebook fa"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa"></i></a>
+            <a href=""><i class="fa-brands fa-threads fa"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin fa"></i></a>
+          </h2>
+        </div>
+        <div class="leading-[20px] text-[clamp(10px,2.5vw,16px)] [@media(max-width:833px)]:leading-[15px]">
+          <h3 class="mb-[15px] font-bold">Our Projects</h3>
+          <p>
+            Coding and robotics are hands-on learning <br />
+            methods in which students explore <br />
+            agile solutions
+          </p>
+        </div>
+        <div class="leading-[20px] text-[clamp(10px,2.5vw,16px)] [@media(max-width:833px)]:leading-[15px]">
+          <h3 class="mb-[15px] font-bold">Our Staffs</h3>
+          <p>
+            Our esteemed class comprises dedicated educators <br />
+            who consistently demonstrate a passion for fostering <br />
+            intellectual curiosity and academic excellence<br />
+            within our student body.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
     <!-- Back to Top Button -->
     <a href="#home" class="back-to-top">&#8679;</a>
-
+ 
     <footer class="flex justify-center bg-[#0D3B66] text-white text-[clamp(10px,1.8vw,30px)]">
         <p>&copy; 2025 Secondary School. All rights reserved.</p>
     </footer>
