@@ -2,7 +2,7 @@
   "name": "SpringForth GraceLand School",
   "short_name": "SpringForth",
   "description": "SpringForth GraceLand School official website.",
-  "start_url": "/",
+  "start_url": "/springforthgraceland/",
   "display": "standalone",
   "background_color": "#0D3B66",
   "theme_color": "#3DA5D9",
