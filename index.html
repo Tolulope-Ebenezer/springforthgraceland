@@ -7,6 +7,12 @@
     <title>SpringForth GraceLand School</title>
     <meta name="theme-color" content="#3DA5D9">
     <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="./dist/output.css" as="style">
+    <link rel="preload" href="./font-awesome-4.7.0/css/font-awesome.min.css" as="style">
+    <link rel="preload" href="./IMG/HomePage.webp" as="image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap" crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/output.css">
     <!-- ICONS LINK -->
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
@@ -33,7 +39,7 @@
         </nav>
         <div class="h-[0.1rem] bg-red-500"></div>
         <nav id="navTwo" class="relative flex items-center justify-between bg-gradient-to-r from-[rgba(10,40,102,0.8)] to-[rgba(61,165,217,0.8)] px-[10px] py-[8px]">
-            <div class="w-[30px] sm:w-[35px] shrink-0"><img id="logo-img" src="./IMG/springforth-logo.webp" alt="logo" class="w-full rounded-lg"></div>
+            <div class="w-[30px] sm:w-[35px] shrink-0"><img id="logo-img" src="./IMG/springforth-logo.webp" alt="logo" class="w-full rounded-lg" width="35" height="35"></div>
             <a href="./result.html" class="ml-auto mr-[10px] inline-flex items-center justify-center rounded-lg bg-red-600 px-[8px] py-[4px] text-[clamp(10px,1.3vw,14px)] font-bold text-white hover:bg-red-500 transition">
                 Result Checker
             </a>
@@ -62,7 +68,8 @@
 
     <!-- Home Section -->
     <section id="home"
-        class="flex min-h-screen items-center justify-center bg-[url('../IMG/HomePage.webp')] bg-cover bg-center bg-no-repeat px-[16px] py-[120px] sm:px-[24px] md:px-[32px] lg:px-[40px]">
+        class="relative flex min-h-screen items-center justify-center px-[16px] py-[120px] sm:px-[24px] md:px-[32px] lg:px-[40px]">
+        <img src="./IMG/HomePage-w1200.webp" srcset="./IMG/HomePage-w400.webp 400w, ./IMG/HomePage-w800.webp 800w, ./IMG/HomePage-w1200.webp 1200w, ./IMG/HomePage-w1600.webp 1600w" sizes="100vw" alt="SpringForth grounds" loading="eager" decoding="async" width="1600" height="900" class="absolute inset-0 w-full h-full object-cover object-center -z-10">
         <div
             class="flex w-full max-w-[9s20px] flex-col items-center rounded-[30px] bg-gradient-to-b from-[rgba(68,177,223,0.6)] to-[rgba(128,139,196,0)] px-[20px] py-[30px] text-center sm:px-[35px] sm:py-[40px] md:px-[50px] md:py-[55px]">
             <h1 class="text-[clamp(24px,5vw,40px)] font-bold leading-tight text-white">
@@ -97,7 +104,7 @@
             </div>
             <div class="w-full md:w-1/2">
                 <div class="overflow-hidden rounded-[30px] border border-white/20 shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
-                    <video src="./IMG/SPRINGFORTH SCHOOL.mp4" poster="./IMG/aboutus.webp" controls aria-label="Springforth school video"
+                    <video src="./IMG/SPRINGFORTH SCHOOL.mp4" poster="./IMG/aboutus.webp" controls preload="none" playsinline aria-label="Springforth school video"
                         class="w-full h-[420px] min-h-[280px] object-cover transition-transform duration-500 ease-out hover:scale-[1.03]"
                         style="object-position:50% 20%"></video>
                     <div class="bg-white p-[16px] text-center">
@@ -118,7 +125,7 @@
             <div class="w-full max-w-[1200px] overflow-x-auto px-[16px] gap-[18px] flex snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-4">
                 <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0 overflow-hidden rounded-[24px] border border-[#0D3B66] bg-white shadow-[0_20px_50px_rgba(13,59,102,0.12)]">
                     <div class="h-[260px] overflow-hidden">
-                        <img src="./IMG/Teacher1.webp" alt="Admin Mrs Ajisola" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]">
+                        <img src="./IMG/Teacher1-w800.webp" srcset="./IMG/Teacher1-w400.webp 400w, ./IMG/Teacher1-w800.webp 800w, ./IMG/Teacher1-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 25vw" alt="Admin Mrs Ajisola" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]" loading="lazy" decoding="async">
                     </div>
                     <div class="p-[16px] bg-[#f8fafc]">
                         <p class="font-bold text-[clamp(16px,2vw,18px)] text-[#0D3B66]">Mrs. Ajisola</p>
@@ -127,7 +134,7 @@
                 </div>
                 <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0 overflow-hidden rounded-[24px] border border-[#0D3B66] bg-white shadow-[0_20px_50px_rgba(13,59,102,0.12)]">
                     <div class="h-[260px] overflow-hidden">
-                        <img src="./IMG/Teacher2.webp" alt="Head Master Mr. Kunle" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]">
+                        <img src="./IMG/Teacher2-w800.webp" srcset="./IMG/Teacher2-w400.webp 400w, ./IMG/Teacher2-w800.webp 800w, ./IMG/Teacher2-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 25vw" alt="Head Master Mr. Kunle" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]" loading="lazy" decoding="async">
                     </div>
                     <div class="p-[16px] bg-[#f8fafc]">
                         <p class="font-bold text-[clamp(16px,2vw,18px)] text-[#0D3B66]">Mr. Kunle</p>
@@ -136,7 +143,7 @@
                 </div>
                 <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0 overflow-hidden rounded-[24px] border border-[#0D3B66] bg-white shadow-[0_20px_50px_rgba(13,59,102,0.12)]">
                     <div class="h-[260px] overflow-hidden">
-                        <img src="./IMG/Teacher3.webp" alt="Principal Mrs. Oderinde" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]">
+                        <img src="./IMG/Teacher3-w800.webp" srcset="./IMG/Teacher3-w400.webp 400w, ./IMG/Teacher3-w800.webp 800w, ./IMG/Teacher3-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 25vw" alt="Principal Mrs. Oderinde" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]" loading="lazy" decoding="async">
                     </div>
                     <div class="p-[16px] bg-[#f8fafc]">
                         <p class="font-bold text-[clamp(16px,2vw,18px)] text-[#0D3B66]">Mrs. Oderinde</p>
@@ -145,7 +152,7 @@
                 </div>
                 <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0 overflow-hidden rounded-[24px] border border-[#0D3B66] bg-white shadow-[0_20px_50px_rgba(13,59,102,0.12)]">
                     <div class="h-[260px] overflow-hidden">
-                        <img src="./IMG/Teacher4.webp" alt="Vice Principal Mrs. Olakunle" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]">
+                        <img src="./IMG/Teacher4-w800.webp" srcset="./IMG/Teacher4-w400.webp 400w, ./IMG/Teacher4-w800.webp 800w, ./IMG/Teacher4-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 25vw" alt="Vice Principal Mrs. Olakunle" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]" loading="lazy" decoding="async">
                     </div>
                     <div class="p-[16px] bg-[#f8fafc]">
                         <p class="font-bold text-[clamp(16px,2vw,18px)] text-[#0D3B66]">Mrs. Olakunle</p>
@@ -164,36 +171,36 @@
         </h2>
         <div class="w-full max-w-[1200px] overflow-x-auto px-[16px] sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex snap-x snap-mandatory">
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/galimg1.webp" alt="School Image 1"
-                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]">
+                <img src="./IMG/galimg1-w800.webp" srcset="./IMG/galimg1-w400.webp 400w, ./IMG/galimg1-w800.webp 800w, ./IMG/galimg1-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="School Image 1"
+                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/galimg2.webp" alt="School Image 2"
-                    class="rounded-[20px] border border-[#E63946] object-cover w-full h-[220px]">
+                <img src="./IMG/galimg2-w800.webp" srcset="./IMG/galimg2-w400.webp 400w, ./IMG/galimg2-w800.webp 800w, ./IMG/galimg2-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="School Image 2"
+                    class="rounded-[20px] border border-[#E63946] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/galimg3.webp" alt="School Image 3"
-                    class="rounded-[20px] border border-[#E63946] object-cover w-full h-[220px]">
+                <img src="./IMG/galimg3-w800.webp" srcset="./IMG/galimg3-w400.webp 400w, ./IMG/galimg3-w800.webp 800w, ./IMG/galimg3-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="School Image 3"
+                    class="rounded-[20px] border border-[#E63946] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/galimg4.webp" alt="School Image 4"
-                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]">
+                <img src="./IMG/galimg4-w800.webp" srcset="./IMG/galimg4-w400.webp 400w, ./IMG/galimg4-w800.webp 800w, ./IMG/galimg4-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="School Image 4"
+                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/iTTable3.webp" alt="Graduation party image 1"
-                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]">
+                <img src="./IMG/iTTable3-w800.webp" srcset="./IMG/iTTable3-w400.webp 400w, ./IMG/iTTable3-w800.webp 800w, ./IMG/iTTable3-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="Graduation party image 1"
+                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/IMG-20260718-WA0088.webp" alt="Graduation party image 2"
-                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]">
+                <img src="./IMG/IMG-20260718-WA0088-w800.webp" srcset="./IMG/IMG-20260718-WA0088-w400.webp 400w, ./IMG/IMG-20260718-WA0088-w800.webp 800w, ./IMG/IMG-20260718-WA0088-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="Graduation party image 2"
+                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/IMG-20260718-WA0093.webp" alt="Graduation party image 3"
-                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]">
+                <img src="./IMG/IMG-20260718-WA0093-w800.webp" srcset="./IMG/IMG-20260718-WA0093-w400.webp 400w, ./IMG/IMG-20260718-WA0093-w800.webp 800w, ./IMG/IMG-20260718-WA0093-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="Graduation party image 3"
+                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
             <div class="min-w-[90%] snap-center shrink-0 sm:min-w-0">
-                <img src="./IMG/basic 5 graduant.webp" alt="Graduation party image 4"
-                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]">
+                <img src="./IMG/basic 5 graduant-w800.webp" srcset="./IMG/basic 5 graduant-w400.webp 400w, ./IMG/basic 5 graduant-w800.webp 800w, ./IMG/basic 5 graduant-w1200.webp 1200w" sizes="(max-width:640px) 90vw, 33vw" alt="Graduation party image 4"
+                    class="rounded-[20px] border border-[#0D3B66] object-cover w-full h-[220px]" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
