@@ -137,7 +137,7 @@ header {
 }
 
 .home {
-    background: linear-gradient(150deg, rgb(21, 71, 118, 0.6), rgba(128, 139, 196, 0)), url(../IMG/HomePage.png);
+    background: linear-gradient(150deg, rgb(21, 71, 118, 0.6), rgba(128, 139, 196, 0)), url(../IMG/HomePage.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -213,79 +213,79 @@ header {
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #0D3B66;
     color: white;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 20px;
     background-color: #E63946;
     color: white;
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 0.8rem;
     border-radius: 50%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     transition: background 0.3s, transform 0.3s;
-    z-index: 1000;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
 }
 
 .back-to-top:hover {
     background-color: #0D3B66;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* Responsive */
-@media (max-width: 800px) {
-
-    #navOne span {
-        display: none;
+@media (max-width: 640px) {
+    body {
+        padding-top: 140px;
     }
 
-    .nav-links {
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        background-color: #0D3B66;
+    .back-to-top {
+        bottom: 20px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    #navOne {
         flex-direction: column;
-        width: 200px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        padding: 4rem 4rem 2rem 4rem;
+        gap: 8px;
     }
 
-    .nav-links li {
-        margin: 1.5rem 0;
+    #navOne a {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
 
-    #nav-links li:hover {
-        background-color: #3DA5D9;
+    #contact {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
     }
 
-    #menu-toggle:checked+.hamburger+.nav-links {
-        transform: translateX(0);
-        /* display: block; */
-    }
-
-    .hamburger {
-        display: block;
-        color: white;
-    }
-
-    .course-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery img {
-        width: 150px;
-        height: 120px;
+    #socialMedia {
+        gap: 8px;
     }
 }
 
