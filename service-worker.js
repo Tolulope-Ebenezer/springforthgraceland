@@ -1,5 +1,4 @@
 const CACHE_NAME = 'springforth-cache-v2';
-const CACHE_NAME = 'springforth-cache-v2';
 const MAX_CACHE_ENTRIES = 60;
 const ASSETS = [
   './',
